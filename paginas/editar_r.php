@@ -13,23 +13,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Lideres</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/lideres.css">
+    <link rel="stylesheet" href="css/lideres.php">
 </head>
 <body>
     
 
     <main>
-        <section class="formulario">
-            <h2>Cadastro de Lideres</h2>
+        <section class="form">
+            <div class="titulo-formulario">
+                <h2>Cadastro de Membros</h2>
+            </div>
             <a href="l-religiosos.php">
                 <div class="fechar">
                     <div class="x"></div>
                 </div>
             </a>
-            <?php 
-                $dados = new ReligiososView();
-                $dados->getReligiosoId($id);
-            ?>
+            <div class="formulario">
+                <form action="" method="post">
+                    <?php
+                        $dados = new ReligiososView();
+                        $dados->getReligiosoId($id);
+                    ?>
+                </form>
+            </div>
         </section>
     <?php 
         if(isset($_POST['nome'])){

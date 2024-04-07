@@ -18,7 +18,13 @@
             $sql = "SELECT * FROM comunitarios ORDER BY nome";
             $stmt = $this->connect()->query($sql);
             $dados = $stmt->fetchAll();
-            return $dados;
+            $num = $stmt->rowCount();
+            if($num >= 1){
+                return $dados;
+
+            } else{
+                return 0;
+            }
         }
 
         protected function searchComunitario($nome, $apelido, $cargo){

@@ -71,6 +71,8 @@
 
               public function getMemberView() {
                 $results = $this->getMember();
+
+                if(is_array($results)){
               
                 foreach($results as $result){
                  
@@ -86,10 +88,15 @@
                 </form>
               <?php 
               }
+              } else if($results == 0){
+                echo "<tr><td>Nenhum resultado encontrado</td></tr>";
+              }
               }
 
               public function getMemberViewPublico() {
                 $results = $this->getMember();
+
+                if(is_array($results)){
               
                 foreach($results as $result){
                  
@@ -103,6 +110,9 @@
                   </tr>
                 </form>
               <?php 
+              }
+              } else if($results == 0){
+                echo "<tr><td>Nenhum resultado encontrado</td></tr>";
               }
               }
                

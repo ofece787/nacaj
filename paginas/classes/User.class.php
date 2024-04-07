@@ -17,7 +17,13 @@
             $stmt = $this->connect()->query($sql);
             $dados = $stmt->fetchAll();
 
-            return $dados;
+            $num = $stmt->rowCount();
+            if($num >= 1){
+                return $dados;
+
+            } else {
+                return 0;
+            }
         }
 
         protected function getMemberById($id) {
@@ -27,10 +33,6 @@
             $result = $stmt->fetchAll();
             return $result;
         }
-
-        
-
-        
 
         protected function setUser($nome,$apelido,$cargo,$mafiliacao,$bi,$bairro,$contacto,$dnascimento,$idadea,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot,$nome_usuario,$nome_editado,$data_modificacao){
             $sql = "SELECT * FROM membros_1 WHERE nome = ? AND apelido = ?";

@@ -23,7 +23,7 @@
                 if(!empty($_GET['id'])){
                     $id = $_GET['id'];
         
-                    echo "<a href=\"sistema_cadastro_lideres/delete.php?id=".$id."\"><div class=\"sim\">Sim</div></a>";
+                    echo "<a href=\"delete_lr.php?id=".$id."\"><div class=\"sim\">Sim</div></a>";
                 }
         
             ?>
