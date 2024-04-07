@@ -26,6 +26,9 @@
     .p-desk{
         display: none;
     }
+    .nome{
+        min-width: 200px;
+    }
 }
 
 *{

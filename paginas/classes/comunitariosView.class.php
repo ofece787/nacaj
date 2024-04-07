@@ -10,7 +10,7 @@
           ?>
             
             <tr>
-                <td><?php echo ucfirst($result['nome']).' '.ucwords($result['apelido'])?></td>
+                <td class="nome"><?php echo ucfirst($result['nome']).' '.ucwords($result['apelido'])?></td>
                 <td class="valores"><?php echo $result['escalao']?></td>
                 <td class="valores"><?php echo $result['endereco']?></td>
                 <td class="valores"><?php echo $result['contacto']?></td>
@@ -31,7 +31,7 @@
           ?>
             
             <tr>
-                <td><?php echo ucwords($result['nome']).' '.ucwords($result['apelido'])?></td>
+                <td class="nome"><?php echo ucwords($result['nome']).' '.ucwords($result['apelido'])?></td>
                 <td class="valores"><?php echo $result['escalao']?></td>
                 <td class="valores"><?php echo $result['endereco']?></td>
                 <td class="valores"><?php echo $result['contacto']?></td>

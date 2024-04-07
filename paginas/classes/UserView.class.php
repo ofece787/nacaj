@@ -76,7 +76,7 @@
               ?>
                 
                   <tr>
-                    <td><?php echo ucfirst($result['nome']).' '.ucwords($result['apelido'])?></td>
+                    <td class="nome"><?php echo ucfirst($result['nome']).' '.ucwords($result['apelido'])?></td>
                     <td class="valores"><?php echo ucwords($result['cargo'])?></td>
                     <td class="valores"><?php echo $result['contacto']?></td>
                     <td class="ver-mais"><a href="informacoes_m.php?id=<?php echo $result['id']?>"><img src="../imagens/olho.png" class="icone" alt=""></a></td>
@@ -95,7 +95,7 @@
               ?>
                 
                   <tr>
-                    <td><?php echo ucfirst($result['nome']).' '.ucwords($result['apelido'])?></td>
+                    <td class="nome"><?php echo ucfirst($result['nome']).' '.ucwords($result['apelido'])?></td>
                     <td class="valores"><?php echo ucwords($result['cargo'])?></td>
                     <td class="valores"><?php echo $result['contacto']?></td>
                   
