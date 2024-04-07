@@ -29,5 +29,9 @@
     public function senhaDb($nome, $senha){
       $this->cadastrarSenha($nome, $senha);
     }
+
+    public function setFinanceiro($nome,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
+      $this->createFinanceiro($nome,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot);
+    }
      
   }

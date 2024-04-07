@@ -55,6 +55,7 @@
                     </tbody>
                 </table>
                 <a href="atualizar_financas.php">Atualizar</a>
+                <a href="cadastro_financeiro.php">Criar</a>
             </section>
         </section>
     </main>
