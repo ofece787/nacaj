@@ -16,7 +16,7 @@
                 <td class="valores"><?php echo $result['escalao']?></td>
                 <td class="valores"><?php echo $result['endereco']?></td>
                 <td class="valores"><?php echo $result['contacto']?></td>
-                <td class="valores ver-mais"><a href="editar_lr.php?id=<?php echo $result['id']?>"><img src="../imagens/latadelixoicone.png" class="icone" alt=""></a><a href="prompt-comunitarios.php?id=<?php echo $result['id']?>"><img src="../imagens/latadelixoicone.png" class="icone" alt=""></a></td>
+                <td class="valores ver-mais"><a href="editar_lr.php?id=<?php echo $result['id']?>" class="editar_margin"><img src="../imagens/latadelixoicone.png" class="icone" alt=""></a><a href="prompt-comunitarios.php?id=<?php echo $result['id']?>"><img src="../imagens/latadelixoicone.png" class="icone" alt=""></a></td>
               </tr>
             </form>
 

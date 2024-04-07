@@ -20,7 +20,7 @@
                 <td class="valores"><?php echo $result['bairro']?></td>
                 <td class="valores"><?php echo $result['contacto']?></td>
                 <td class="valores ver-mais">
-                  <a href="editar_r.php?id=<?php echo $result['id']?>"><img src="../imagens/latadelixoicone.png" class="icone" alt=""></a>
+                  <a href="editar_r.php?id=<?php echo $result['id']?>" class="editar_margin"><img src="../imagens/latadelixoicone.png" class="icone" alt=""></a>
                   <a href="prompt-lideres.php?id=<?php echo $result['id']?>"><img src="../imagens/latadelixoicone.png" class="icone" alt=""></a></td>
               </tr>
             </form>

@@ -29,6 +29,10 @@
     .nome{
         min-width: 200px;
     }
+
+    .editar_margin{
+        margin-right: 20px;
+    }
 }
 
 *{

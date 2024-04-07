@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="">Religioa</label>
+                        <label for="">Religiao</label>
                         <input type="text" name="religiao" required>
                     </div>
 
