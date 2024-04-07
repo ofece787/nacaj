@@ -133,16 +133,15 @@
 
         }
 
-        protected function upValue($nome,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
-            $sql = "SELECT * FROM ano_2023 WHERE nome = ?";
+        protected function upValue($nome,$apelido,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
+            $sql = "SELECT * FROM ano_2023 WHERE nome = ? and apelido = ?";
 
 
 
             $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$nome]);
+            $stmt->execute([$nome, $apelido]);
             $dados = $stmt->fetchAll();
             $num = $stmt->rowCount();
-            //echo $dados['janeiro'];
             foreach($dados as $dado){
 
                 $jan_value = $dado['janeiro'] + $jan;
@@ -242,12 +241,23 @@
         }
 
         protected function createFinanceiro($nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
-            $sql = "INSERT INTO ano_2023(nome, apelido, cargo, janeiro, fevereiro, marco, abril,maio, junho, julho, agosto, setembro, outubro, novembro, dezembro, total) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-            $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot]);
+            $sql_prepare = "SELECT * FROM ano_2023 WHERE nome = ? and apelido = ? and cargo = ?";
+            $stmt_prepare = $this->connect()->prepare($sql_prepare);
+            $stmt_prepare->execute([$nome,$apelido,$cargo]);
+            $num = $stmt_prepare->rowCount();
+            if($num == 0){
 
-            echo "<script>alert('Success')</script>";
+                $sql = "INSERT INTO ano_2023(nome, apelido, cargo, janeiro, fevereiro, marco, abril,maio, junho, julho, agosto, setembro, outubro, novembro, dezembro, total) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    
+                $stmt = $this->connect()->prepare($sql);
+                $stmt->execute([$nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot]);
+    
+                echo "<script>alert('Success')</script>";
+            } else {
+                echo "<script>alert('Usar ja existente')</script>";
+            }
+
         }
         
     }

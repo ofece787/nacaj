@@ -21,6 +21,7 @@
               
                 <tr>
                   <td><input type="text" value="<?php echo ucfirst($result['nome']);?>" name="nome_at" id=""></td>
+                  <td><input type="text" value="<?php echo ucfirst($result['apelido'])?>" name="apelido"></td>
                   <td class="valores"><input type="number" name="janeiro" id="" value="0" min="0" max="50"></td>
                   <td class="valores"><input type="number" value="0" name="fevereiro" min="0" max="50"></td>
                   <td class="valores"><input type="number" name="marco" id="" value="0" min="0" max="50"></td>

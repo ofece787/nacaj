@@ -31,6 +31,7 @@
                         <th>
                             <tr>
                                 <td>Nome</td>
+                                <td>Apelido</td>
                                 <td>Janeiro</td>
                                 <td>Fevereiro</td>
                                 <td>Marco</td>
@@ -62,6 +63,7 @@
         if(isset($_POST['atualizar']) && $_POST['nome_at']){
 
             $nome = $_POST['nome_at'];
+            $apelido = $_POST['apelido'];
             $jan = $_POST['janeiro'];
             $fev = $_POST['fevereiro'];
             $mar = $_POST['marco'];
@@ -75,7 +77,7 @@
             $nov = $_POST['novembro'];
             $dez = $_POST['dezembro'];
             $total = 0;
-            $user->updateValue($nome , $jan, $fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$total);
+            $user->updateValue($nome, $apelido, $jan, $fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$total);
 
             
         }
