@@ -30,8 +30,8 @@
       $this->cadastrarSenha($nome, $senha);
     }
 
-    public function setFinanceiro($nome,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
-      $this->createFinanceiro($nome,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot);
+    public function setFinanceiro($nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
+      $this->createFinanceiro($nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot);
     }
      
   }

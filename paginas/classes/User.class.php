@@ -241,11 +241,11 @@
 
         }
 
-        protected function createFinanceiro($nome,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
-            $sql = "INSERT INTO ano_2023(nome, janeiro, fevereiro, marco, abril,maio, junho, julho, agosto, setembro, outubro, novembro, dezembro, total) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        protected function createFinanceiro($nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
+            $sql = "INSERT INTO ano_2023(nome, apelido, cargo, janeiro, fevereiro, marco, abril,maio, junho, julho, agosto, setembro, outubro, novembro, dezembro, total) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
             $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$nome,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot]);
+            $stmt->execute([$nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot]);
 
             echo "<script>alert('Success')</script>";
         }
