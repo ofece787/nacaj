@@ -27,8 +27,8 @@
                 <img src="../imagens/humburguer.png" class="icone" alt="">
             </div>
             <div class="lista active">
-                <a href="" class="selected"><img src="../imagens/userLogo.png" class="icone" alt=""><span>Membros</span></a>
-                <a href="atualizar_financas.php"><img src="../imagens/userLogo.png" class="icone" alt=""><span>Comunitarios</span></a>
+                <a href="" class="selected"><img src="../imagens/userLogo.png" class="icone" alt=""><span>T, Financeira</span></a>
+                <a href="atualizar_financas.php"><img src="../imagens/userLogo.png" class="icone" alt=""><span>A. Financeira</span></a>
             </div>
         </section>
         <section class="p-desk">
@@ -91,7 +91,7 @@
                     </thead>
                     <tbody>
                     <?php
-                        $display = new UserView();
+                        $display = new FinancasView();
                         $display->getUsersNoUp();
                     ?>
                     </tbody>

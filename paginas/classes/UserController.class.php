@@ -6,17 +6,13 @@
       $this->setUser($nome,$apelido,$cargo,$mafiliacao,$bi,$bairro,$contacto,$dnascimento,$idadea,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot,$nome_usuario,$nome_editado,$data_modificacao);
     }
 
-    public function updateValue($nome,$apelido,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
-      $this->upValue($nome,$apelido,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot);
-    }
+    
 
     public function logInDados($nome, $senha) {
       $this->logIn($nome, $senha);
     }
 
-    public function log_financas($nome, $senha) {
-      $this->logIn_financas($nome, $senha);
-    }
+    
 
     public function apagarUsuario($id,$nome){
       $this->deleteMember($id,$nome);
@@ -30,8 +26,6 @@
       $this->cadastrarSenha($nome, $senha);
     }
 
-    public function setFinanceiro($nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
-      $this->createFinanceiro($nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot);
-    }
+    
      
   }

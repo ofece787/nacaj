@@ -18,7 +18,7 @@
         $p_usuario = strtolower($_POST['usuario']);
         $p_senha = $_POST['senha'];
         
-        $usuarios = new UserController();
+        $usuarios = new FinancasController();
         $usuarios->log_financas($p_usuario, $p_senha);   
     
     }

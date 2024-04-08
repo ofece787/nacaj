@@ -75,7 +75,7 @@
             $dez = 0;
             $tot = 0;
 
-            $membro = new UserController();
+            $membro = new FinancasController();
             $membro->setFinanceiro($nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot,$nome_usuario);
 
         }
