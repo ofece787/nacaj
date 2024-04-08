@@ -24,15 +24,21 @@ main{
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 5px;
     font-size: 1.2em;
 }
+main section{
+    width: 100%;
+    display: flex;
+}
 
 .caixa{
     display: flex;
     flex-direction: column;
+    align-items: center;
     background: #fff;
     max-width: 400px;
     max-height: 300px;

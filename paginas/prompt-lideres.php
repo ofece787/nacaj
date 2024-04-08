@@ -17,17 +17,19 @@
 <body>
     
     <main>
-        <div><p>Deseja realmente apagar este membro?</p></div>
-        <section>
-            <?php
-                if(!empty($_GET['id'])){
-                    $id = $_GET['id'];
-        
-                    echo "<a href=\"delete_l.php?id=".$id."\"><div class=\"sim\">Sim</div></a>";
-                }
-        
-            ?>
-            <a class="nao" href="l-religiosos.php"><div>Não</div></a>
+        <section class="caixa">
+            <div><p>Deseja realmente apagar este lider?</p></div>
+            <section>
+                <?php
+                    if(!empty($_GET['id'])){
+                        $id = $_GET['id'];
+            
+                        echo "<a href=\"delete_l.php?id=".$id."\"><div class=\"sim\">Sim</div></a>";
+                    }
+            
+                ?>
+                <a class="nao" href="l-religiosos.php"><div>Não</div></a>
+            </section>
         </section>
     </main>
 </body>

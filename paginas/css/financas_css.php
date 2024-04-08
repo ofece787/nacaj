@@ -8,10 +8,6 @@
     font-style: sans-serif;
 }
 
-body{
-    background-color: #808080;
-}
-
 main .second{
     padding: 0 10px 0 10px;
 }
@@ -38,14 +34,10 @@ table tbody tr td input{
 }
 .valores{
     width: 85px;
+    background: #fff;
 }
 table tbody tr td{
     border-radius: 7px;
-}
-table tbody tr td .botao{
-    background: #808080;
-    border-radius: 2px;
-    border: solid 1px #808080;
 }
 table tbody tr .border_less{
     border: none;
@@ -56,14 +48,5 @@ main .second form{
 }
 table{
     background: #fff;
-    border-radius: 10px;
-    padding: 5px;
-}
-thead td{
-    background: blue;
-    color: #fff;
-    padding: 2px 4px;
-    text-align: center;
-    font-size: 1.2em;
     border-radius: 10px;
 }
