@@ -100,4 +100,22 @@
 
             return $dados;
         }
+
+        protected function searchFinancas($nome, $apelido){
+            $nome = "%$nome%";
+            $apelido = "%$apelido%";
+            $sql = "SELECT * FROM ano_2023 where nome like ? or apelido like ?";
+
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute([$nome,$apelido]);
+            $dados = $stmt->fetchAll();
+            $num = $stmt->rowCount();
+
+
+            if($num >=1){
+                return $dados;
+            } else{
+                return 0;
+            }
+        }
     }

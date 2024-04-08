@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="pesquisa">
-                    <form action="search.php" method="post">
+                    <form action="search_financas.php" method="post">
                         <div class="campos">
                             <input type="search" required name="procura" id="campo">
                             <button class="botaoSearch" type="submit"><img src="../imagens/lupa.png" class="icone" alt=""></button>
