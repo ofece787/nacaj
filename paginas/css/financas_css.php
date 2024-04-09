@@ -50,3 +50,22 @@ table{
     background: #fff;
     border-radius: 10px;
 }
+
+.nome{
+    min-width: 200px;
+    background: #fff;
+}
+.submit{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: #808080;
+}

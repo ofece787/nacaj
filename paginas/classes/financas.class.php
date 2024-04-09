@@ -13,7 +13,7 @@
                 $sql = "INSERT INTO ano_2023(nome, apelido, cargo, janeiro, fevereiro, marco, abril,maio, junho, julho, agosto, setembro, outubro, novembro, dezembro, total) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     
                 $stmt = $this->connect()->prepare($sql);
-                $stmt->execute([$nome,$apelido,$cargo,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot]);
+                $stmt->execute([strtolower($nome),strtolower($apelido),strtolower($cargo),$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot]);
     
                 echo "<script>alert('Success')</script>";
             } else {
@@ -28,7 +28,7 @@
 
 
             $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$nome, $apelido]);
+            $stmt->execute([strtolower($nome), strtolower($apelido)]);
             $dados = $stmt->fetchAll();
             $num = $stmt->rowCount();
             foreach($dados as $dado){
@@ -55,7 +55,7 @@
     
     
                     $stmt = $this->connect()->prepare($sql);
-                    $stmt->execute([$nome,$jan_value,$fev_value,$mar_value,$abr_value,$mai_value,$jun_value,$jul_value,$ago_value,$set_value,$out_value,$nov_value,$dez_value,$tot_value,$nome]);
+                    $stmt->execute([strtolower($nome),$jan_value,$fev_value,$mar_value,$abr_value,$mai_value,$jun_value,$jul_value,$ago_value,$set_value,$out_value,$nov_value,$dez_value,$tot_value,strtolower($nome)]);
                     echo "<script>alert('success')</script>";
                 } else{
                     echo "<script>alert('Nobody found')</script>";
@@ -67,7 +67,7 @@
         protected function logIn_financas($nome, $senha) {
             $sql = "SELECT * FROM usuario_senha WHERE nome = ?";
             $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$nome]);
+            $stmt->execute([strtolower($nome)]);
             $dados = $stmt->rowCount();
 
             if($dados >= 1){
@@ -107,7 +107,7 @@
             $sql = "SELECT * FROM ano_2023 where nome like ? or apelido like ?";
 
             $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$nome,$apelido]);
+            $stmt->execute([strtolower($nome),strtolower($apelido)]);
             $dados = $stmt->fetchAll();
             $num = $stmt->rowCount();
 

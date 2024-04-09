@@ -73,6 +73,7 @@
                         <th>
                             <tr>
                                 <td>Nome</td>
+                                <td>Apelido</td>
                                 <td>Janeiro</td>
                                 <td>Fevereiro</td>
                                 <td>Marco</td>
@@ -89,12 +90,18 @@
                         </th>
                     </thead>
                     <tbody>
-                    <?php
-                        $display = new FinancasView();
-                        $display->getUsers();
-                    ?>
-                    </tbody>
-                </table>
+                    <form action="" method="post">
+                        <?php
+                            $display = new FinancasView();
+                            $display->getUsers();
+                        ?>
+                        
+                        <button class="submit" type="submit">
+                            <img src="../imagens/plussign.png" class="icone" alt="">
+                        </button>
+                    </form>
+                </tbody>
+            </table>
             </section>
         </section>
     </main>

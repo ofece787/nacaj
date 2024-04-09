@@ -10,7 +10,7 @@
             ?>
               
                 <tr>
-                  <td class="nome"><?php echo ucfirst($result['nome'].' '.$result['apelido']);?></td>
+                  <td class="nome"><?php echo ucwords($result['nome']).' '.ucwords($result['apelido']);?></td>
                   <td class="valores"><?php echo $result['janeiro']?></td>
                   <td class="valores"><?php echo $result['fevereiro']?></td>
                   <td class="valores"><?php echo $result['marco']?></td>
@@ -35,10 +35,10 @@
             foreach($results as $result){
                
             ?>
-              <form action="" method="post">
               
                 <tr>
-                  <td><input type="text" value="<?php echo ucfirst($result['nome']).' '.ucfirst($result['apelido'])?>" name="apelido"></td>
+                  <td class="nome"><input type="text" value="<?php echo $result['nome']?>" name="nome"></td>
+                  <td class="nome"><input type="text" value="<?php echo $result['apelido']?>"></td>
                   <td class="valores"><input type="number" name="janeiro" id="" value="0" min="0" max="50"></td>
                   <td class="valores"><input type="number" value="0" name="fevereiro" min="0" max="50"></td>
                   <td class="valores"><input type="number" name="marco" id="" value="0" min="0" max="50"></td>
@@ -51,9 +51,7 @@
                   <td class="valores"><input type="number" value="0" name="outubro" min="0" max="50"></td>
                   <td class="valores"><input type="number" name="novembro" id="" value="0" min="0" max="50"></td>
                   <td class="valores"><input type="number" name="dezembro" id="" value="0" min="0" max="50"></td>
-                  <td class="border_less"><input type="submit" class="botao" value="Atualizar" name="atualizar"></td>
                 </tr>
-              </form>
             <?php 
             }
         }
@@ -92,9 +90,9 @@
                 foreach($results as $result){
                 ?>  
 
-                <form action="" method="post">
                 <tr>
-                  <td><input type="text" value="<?php echo ucfirst($result['nome']).' '.ucfirst($result['apelido'])?>" name="apelido"></td>
+                  <td class="nome"><input type="text" value="<?php echo $result['nome']?>" name="nome"></td>
+                  <td class="nome"><input value="<?php echo $result['apelido']?>" name="apelido"></td>
                   <td class="valores"><input type="number" name="janeiro" id="" value="0" min="0" max="50"></td>
                   <td class="valores"><input type="number" value="0" name="fevereiro" min="0" max="50"></td>
                   <td class="valores"><input type="number" name="marco" id="" value="0" min="0" max="50"></td>
@@ -107,9 +105,8 @@
                   <td class="valores"><input type="number" value="0" name="outubro" min="0" max="50"></td>
                   <td class="valores"><input type="number" name="novembro" id="" value="0" min="0" max="50"></td>
                   <td class="valores"><input type="number" name="dezembro" id="" value="0" min="0" max="50"></td>
-                  <td class="border_less"><input type="submit" class="botao" value="Atualizar" name="atualizar"></td>
                 </tr>
-                </form>
+                
                 <?php
                 }
             }
