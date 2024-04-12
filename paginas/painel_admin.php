@@ -56,7 +56,7 @@ if (!$logged) {
                             <img src="../imagens/backarrow.png" class="icone" alt="">
                         </div>
                     </a>
-                    <a href="cadastro_senhas.php">
+                    <a href="form_senhas.php">
                         <p class="logado"><?php echo ucfirst($_SESSION['usuario']);
                         ?></p>
                     </a>

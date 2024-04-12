@@ -31,7 +31,10 @@
             $stmt->execute([strtolower($nome), strtolower($apelido)]);
             $dados = $stmt->fetchAll();
             $num = $stmt->rowCount();
+            $nome = 'ofece';
             foreach($dados as $dado){
+                $nome = $dado['nome'];
+                $apelido = $dado['apelido'];
 
                 $jan_value = $dado['janeiro'] + $jan;
                 $fev_value = $dado['fevereiro'] + $fev;
@@ -47,16 +50,20 @@
                 $dez_value = $dado['dezembro'] + $dez;
                 $total = $dado['total'];
                 $tot_value = $total + $jan +$fev+$mar+$abr+$mai +$jun+$jul+$ago+$set +$out+$nov+$dez+$tot;
+
                 
 
-                if($num==1){
-                    $sql = "UPDATE ano_2023 SET nome=?, janeiro=?, fevereiro=?, marco=?, abril=?,maio=?, junho=?, julho=?, agosto=?, setembro=?, outubro=?, novembro=?, dezembro=?, total=? where nome=?";
+                if($num >= 1){
+                    $sql_done = "UPDATE ano_2023 SET nome=?, apelido = ?, janeiro=?, fevereiro=?, marco=?, abril=?,maio=?, junho=?, julho=?, agosto=?, setembro=?, outubro=?, novembro=?, dezembro=?, total=? where nome=?";
 
     
     
-                    $stmt = $this->connect()->prepare($sql);
-                    $stmt->execute([strtolower($nome),$jan_value,$fev_value,$mar_value,$abr_value,$mai_value,$jun_value,$jul_value,$ago_value,$set_value,$out_value,$nov_value,$dez_value,$tot_value,strtolower($nome)]);
-                    echo "<script>alert('success')</script>";
+                    $stmt_done = $this->connect()->prepare($sql_done);
+                    $stmt_done->execute([strtolower($nome),$apelido,$jan_value,$fev_value,$mar_value,$abr_value,$mai_value,$jun_value,$jul_value,$ago_value,$set_value,$out_value,$nov_value,$dez_value,$tot_value,strtolower($nome)]);
+                    if($stmt_done){
+
+                        echo "<script>alert('success')</script>";
+                    }
                 } else{
                     echo "<script>alert('Nobody found')</script>";
                 }
@@ -97,8 +104,14 @@
             $stmt = $this->connect()->query($sql);
 
             $dados = $stmt->fetchAll();
+            $num = $stmt->rowCount();
 
-            return $dados;
+            if ($num >= 1){
+                return $dados;
+
+            } else {
+                return 0;
+            }
         }
 
         protected function searchFinancas($nome, $apelido){

@@ -36,10 +36,6 @@
                                 <img src="../imagens/backarrow.png" class="icone" alt="">
                             </div>
                         </a>
-                        <a href="">
-                            <p class="logado"><?php echo ucfirst($_SESSION['usuario']);
-                            ?></p>
-                        </a>
                     </div>
                 </div>
                 <div class="pesquisa">

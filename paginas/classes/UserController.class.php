@@ -8,9 +8,7 @@
 
     
 
-    public function logInDados($nome, $senha) {
-      $this->logIn($nome, $senha);
-    }
+    
 
     
 
@@ -22,10 +20,5 @@
       $this->upMember($nome,$apelido,$cargo,$mafiliacao,$bi,$bairro,$contacto,$dnascimento,$id);
     }
 
-    public function senhaDb($nome, $senha){
-      $this->cadastrarSenha($nome, $senha);
-    }
-
-    
      
   }

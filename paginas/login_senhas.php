@@ -13,7 +13,7 @@
         $p_senha = $_POST['senha'];
         
         $usuarios = new SenhasController();
-        $usuarios->logInDados($p_usuario, $p_senha);   
+        $usuarios->loginSenhasDb($p_usuario, $p_senha);   
     
     }
     

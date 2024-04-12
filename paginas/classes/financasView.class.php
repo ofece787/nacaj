@@ -36,22 +36,25 @@
                
             ?>
               
-                <tr>
-                  <td class="nome"><input type="text" value="<?php echo $result['nome']?>" name="nome"></td>
-                  <td class="nome"><input type="text" value="<?php echo $result['apelido']?>"></td>
-                  <td class="valores"><input type="number" name="janeiro" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" value="0" name="fevereiro" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="marco" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="abril" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="maio" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" value="0" name="junho" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="julho" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="agosto" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="setembro" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" value="0" name="outubro" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="novembro" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="dezembro" id="" value="0" min="0" max="50"></td>
-                </tr>
+                <form action="" method="post">
+                  <tr>
+                    <td class="nome"><input type="text" name="nome_at" value="<?php echo $result['nome']?>"></td>
+                    <td class="nome"><input type="text" name="apelido" value="<?php echo $result['apelido']?>"></td>
+                    <td class="valores"><input type="number" name="janeiro" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" value="0" name="fevereiro" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="marco" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="abril" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="maio" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" value="0" name="junho" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="julho" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="agosto" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="setembro" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" value="0" name="outubro" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="novembro" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="dezembro" id="" value="0" min="0" max="50"></td>
+                    <td id="submit"><button type="submit" name="atualizar"><img src="../imagens/plussign.png" class="icone" alt=""></td>
+                  </tr>
+                </form>
             <?php 
             }
         }
@@ -81,6 +84,8 @@
                 </tr>
                 <?php 
                 }
+            } elseif($results == 0){
+              echo "<p>Nenhum resulto encontrado</p>";
             }
         }
 
@@ -109,6 +114,8 @@
                 
                 <?php
                 }
+            } elseif($results == 0){
+              echo "<p>Nenhum resultado encontrado</p>";
             }
         }
     }

@@ -55,17 +55,21 @@ table{
     min-width: 200px;
     background: #fff;
 }
-.submit{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+#submit{
+    border-radius: 50%;
+    background: #808080;
+    border: solid 1px #808080;
+    height: 30px;
+    width: 20px;
+}
+#submit button{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
+    background: transparent;
     border: none;
-    border-radius: 50%;
-    background: #808080;
+    outline: none;
+    width: 20px;
+    height: 30px;
+    cursor: pointer;
 }

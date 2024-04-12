@@ -90,16 +90,11 @@
                         </th>
                     </thead>
                     <tbody>
-                    <form action="" method="post">
                         <?php
                             $display = new FinancasView();
                             $display->getUsers();
                         ?>
                         
-                        <button class="submit" type="submit">
-                            <img src="../imagens/plussign.png" class="icone" alt="">
-                        </button>
-                    </form>
                 </tbody>
             </table>
             </section>
@@ -125,6 +120,7 @@
             $nov = $_POST['novembro'];
             $dez = $_POST['dezembro'];
             $total = 0;
+            echo $nome;
             $user->updateValue($nome, $apelido, $jan, $fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$total);
 
             
