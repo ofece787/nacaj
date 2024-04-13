@@ -47,7 +47,7 @@
                                 <img src="../imagens/backarrow.png" class="icone" alt="">
                             </div>
                         </a>
-                        <a href="cadastro_senhas.php">
+                        <a href="">
                             <p class="logado"><?php echo ucfirst($_SESSION['usuario']);
                             ?></p>
                         </a>

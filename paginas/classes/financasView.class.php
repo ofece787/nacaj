@@ -38,8 +38,10 @@
               
                 <form action="" method="post">
                   <tr>
+                    <td class="id"><input type="text" hidden name="id" value="<?php echo $result['id']?>"></input></td>
                     <td class="nome"><input type="text" name="nome_at" value="<?php echo $result['nome']?>"></td>
                     <td class="nome"><input type="text" name="apelido" value="<?php echo $result['apelido']?>"></td>
+                    <td class="nome"><input type="text" name="cargo" value="<?php echo $result['cargo']?>"></td>
                     <td class="valores"><input type="number" name="janeiro" id="" value="0" min="0" max="50"></td>
                     <td class="valores"><input type="number" value="0" name="fevereiro" min="0" max="50"></td>
                     <td class="valores"><input type="number" name="marco" id="" value="0" min="0" max="50"></td>

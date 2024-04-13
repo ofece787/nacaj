@@ -69,7 +69,10 @@ table{
     background: transparent;
     border: none;
     outline: none;
-    width: 20px;
-    height: 30px;
+    width: 10px;
+    height: 20px;
     cursor: pointer;
+}
+.id{
+    display: none;
 }

@@ -22,7 +22,7 @@
 
         }
 
-        protected function upValue($nome,$apelido,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
+        protected function upValue($id,$nome,$apelido,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot){
             $sql = "SELECT * FROM ano_2023 WHERE nome = ? and apelido = ?";
 
 
@@ -31,7 +31,6 @@
             $stmt->execute([strtolower($nome), strtolower($apelido)]);
             $dados = $stmt->fetchAll();
             $num = $stmt->rowCount();
-            $nome = 'ofece';
             foreach($dados as $dado){
                 $nome = $dado['nome'];
                 $apelido = $dado['apelido'];
@@ -54,12 +53,12 @@
                 
 
                 if($num >= 1){
-                    $sql_done = "UPDATE ano_2023 SET nome=?, apelido = ?, janeiro=?, fevereiro=?, marco=?, abril=?,maio=?, junho=?, julho=?, agosto=?, setembro=?, outubro=?, novembro=?, dezembro=?, total=? where nome=?";
+                    $sql_done = "UPDATE ano_2023 SET janeiro=?, fevereiro=?, marco=?, abril=?,maio=?, junho=?, julho=?, agosto=?, setembro=?, outubro=?, novembro=?, dezembro=?, total=? where id = ?";
 
     
     
                     $stmt_done = $this->connect()->prepare($sql_done);
-                    $stmt_done->execute([strtolower($nome),$apelido,$jan_value,$fev_value,$mar_value,$abr_value,$mai_value,$jun_value,$jul_value,$ago_value,$set_value,$out_value,$nov_value,$dez_value,$tot_value,strtolower($nome)]);
+                    $stmt_done->execute([$jan_value,$fev_value,$mar_value,$abr_value,$mai_value,$jun_value,$jul_value,$ago_value,$set_value,$out_value,$nov_value,$dez_value,$tot_value,$id]);
                     if($stmt_done){
 
                         echo "<script>alert('success')</script>";
