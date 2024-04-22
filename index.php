@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Associação NACAJ</title>
+    <link rel="shortcut icon" href="imagens/logoNACAJalinhado.png" type="image/x-icon">
     <link rel="stylesheet" href="paginas/css/pagina_inicial.php">
     <link rel="stylesheet" href="paginas/css/mobile_style/pagina_inicial_mob.php">
 </head>
@@ -49,7 +50,6 @@
         </section>
 
     </main>
-
 
 
     <script src="js/main_page.js"></script>

@@ -7,7 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+    <title>Associação NACAJ | Log In</title>
+    <link rel="shortcut icon" href="../imagens/logoNACAJalinhado.png" type="image/x-icon">
     <link rel="stylesheet" href="css/prompt.php">
     <link rel="stylesheet" href="css/style.php">
 </head>

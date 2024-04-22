@@ -7,7 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lideres Comunitários</title>
+    <title>Associação NACAJ | Lideres Comunitários</title>
+    <link rel="shortcut icon" href="../imagens/logoNACAJalinhado.png" type="image/x-icon">
     <!--
     <link rel="stylesheet" href="css/media.php">
     <link rel="stylesheet" href="css/painel_view_css.php">-->

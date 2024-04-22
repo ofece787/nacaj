@@ -9,7 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Financeiro</title>
+    <title>Associação NACAJ | Cadastro Financeiro</title>
+    <link rel="shortcut icon" href="../imagens/logoNACAJalinhado.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.php">
     <link rel="stylesheet" href="css/membros_css.php">
     <script src="javascript/jquery/code.jquery.com_jquery-3.7.0.min.js"></script>

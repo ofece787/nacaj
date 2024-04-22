@@ -7,7 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Associação NACAJ | Finanças</title>
+    <link rel="shortcut icon" href="../imagens/logoNACAJalinhado.png" type="image/x-icon">
     <link rel="stylesheet" href="css/financas_css.php">
     <link rel="stylesheet" href="css/style.php">
     <link rel="stylesheet" href="css/painel_view_css.php">
@@ -48,7 +49,8 @@
                             </div>
                         </a>
                         <a href="">
-                            <p class="logado"><?php echo ucfirst($_SESSION['usuario']);
+                            <p class="logado" title="<?php echo ucfirst($_SESSION['usuario']);
+                            ?>"><?php echo ucfirst($_SESSION['usuario']);
                             ?></p>
                         </a>
                     </div>
@@ -97,6 +99,15 @@
                     </tbody>
                 </table>
             </section>
+        </section>
+
+        <section class="caixa-mobile">
+            <div class="cadastrar">
+                <a class="plus-btn" href="cadastro_financeiro.php">
+                    <div><img src="../imagens/plussign.png" class="plus" alt=""></div>
+                </a>
+            </div>
+            
         </section>
     </main>
     

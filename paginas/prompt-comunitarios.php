@@ -11,7 +11,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apagar</title>
+    <title>Associação NACAJ | Apagar</title>
+    <link rel="shortcut icon" href="../imagens/logoNACAJalinhado.png" type="image/x-icon">
     <link rel="stylesheet" href="css/prompt.php">
 </head>
 <body>

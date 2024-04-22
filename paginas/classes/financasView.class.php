@@ -41,7 +41,6 @@
                     <td class="id"><input type="text" hidden name="id" value="<?php echo $result['id']?>"></input></td>
                     <td class="nome"><input type="text" name="nome_at" value="<?php echo $result['nome']?>"></td>
                     <td class="nome"><input type="text" name="apelido" value="<?php echo $result['apelido']?>"></td>
-                    <td class="nome"><input type="text" name="cargo" value="<?php echo $result['cargo']?>"></td>
                     <td class="valores"><input type="number" name="janeiro" id="" value="0" min="0" max="50"></td>
                     <td class="valores"><input type="number" value="0" name="fevereiro" min="0" max="50"></td>
                     <td class="valores"><input type="number" name="marco" id="" value="0" min="0" max="50"></td>
@@ -97,22 +96,27 @@
                 foreach($results as $result){
                 ?>  
 
-                <tr>
-                  <td class="nome"><input type="text" value="<?php echo $result['nome']?>" name="nome"></td>
-                  <td class="nome"><input value="<?php echo $result['apelido']?>" name="apelido"></td>
-                  <td class="valores"><input type="number" name="janeiro" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" value="0" name="fevereiro" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="marco" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="abril" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="maio" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" value="0" name="junho" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="julho" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="agosto" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="setembro" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" value="0" name="outubro" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="novembro" id="" value="0" min="0" max="50"></td>
-                  <td class="valores"><input type="number" name="dezembro" id="" value="0" min="0" max="50"></td>
-                </tr>
+                <form action="" method="post">
+                  <tr>
+                    <input type="number" name="id" value="<?php echo $result['id'] ?>" hidden>
+                    <td class="id"><input type="text" hidden name="id" value="<?php echo $result['id']?>"></input></td>
+                    <td class="nome"><input type="text" name="nome_at" value="<?php echo $result['nome']?>"></td>
+                    <td class="nome"><input type="text" name="apelido" value="<?php echo $result['apelido']?>"></td>
+                    <td class="valores"><input type="number" name="janeiro" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" value="0" name="fevereiro" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="marco" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="abril" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="maio" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" value="0" name="junho" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="julho" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="agosto" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="setembro" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" value="0" name="outubro" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="novembro" id="" value="0" min="0" max="50"></td>
+                    <td class="valores"><input type="number" name="dezembro" id="" value="0" min="0" max="50"></td>
+                    <td id="submit"><button type="submit" name="atualizar"><img src="../imagens/plussign.png" class="icone" alt=""></td>
+                  </tr>
+                </form>
                 
                 <?php
                 }

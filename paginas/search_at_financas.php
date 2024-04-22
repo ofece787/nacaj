@@ -7,7 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Associação NACAJ | Pesquisa</title>
+    <link rel="shortcut icon" href="../imagens/logoNACAJalinhado.png" type="image/x-icon">
     <link rel="stylesheet" href="css/financas_css.php">
     <link rel="stylesheet" href="css/painel_view_css.php">
     <link rel="stylesheet" href="css/icones.php">
@@ -100,6 +101,7 @@
 
         if(isset($_POST['atualizar']) && $_POST['nome_at']){
 
+            $id = $_POST['id'];
             $nome = $_POST['nome_at'];
             $apelido = $_POST['apelido'];
             $jan = $_POST['janeiro'];
@@ -115,9 +117,8 @@
             $nov = $_POST['novembro'];
             $dez = $_POST['dezembro'];
             $total = 0;
-            $user->updateValue($nome, $apelido, $jan, $fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$total);
+            $user->updateValue($id,$nome, $apelido, $jan, $fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$total);
 
-            
         }
         ?>
 
