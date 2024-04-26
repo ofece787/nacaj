@@ -1,5 +1,5 @@
 <?php 
-    include('dados_login.php');
+    include_once('dados_login.php');
     $logged = $_SESSION['logged'] ??null;
     if (!$logged) {
         header('Location: index.php');

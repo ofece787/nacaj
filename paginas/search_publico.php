@@ -1,5 +1,5 @@
 <?php 
-    include 'includes/autoloader.inc.php';
+    include_once 'includes/autoloader.inc.php';
 
 
 ?>
@@ -82,6 +82,7 @@
                                 if(!empty($procura)){
                                     $result = new UserView();
                                     $result->searchMember($nome,$apelido,$cargo);
+                                    $result->searchContagem($nome,$apelido,$cargo);
                                 }
                             }
                         ?>

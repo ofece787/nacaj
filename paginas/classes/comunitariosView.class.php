@@ -53,6 +53,18 @@
         }
         }
 
+        public function countComunitarios() {
+            $result = $this->contarComunitarios();
+            foreach ($result as $res) {
+                echo $res;
+            }
+        }
+
+        public function searchContagem($nome, $apelido, $cargo) {
+            $result = $this->searchCount($nome, $apelido, $cargo);
+            echo '<div class="contagem"><p class="contagem-pessoas">'.$result.'</p></div>';
+        }
+
         public function searchComunity($nome,$apelido,$cargo){
             $result = $this->searchComunitario($nome,$apelido,$cargo);
             if (is_array($result)){

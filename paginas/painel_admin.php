@@ -1,9 +1,10 @@
 <?php 
-include('dados_login.php');
+include_once('dados_login.php');
 $logged = $_SESSION['logged'] ??null;
 if (!$logged) {
     header('Location: index.php');
 }
+$viewMode = new UserView();
 
 ?>
 
@@ -79,6 +80,13 @@ if (!$logged) {
         </div>
         <div class="caixa-total">
             <table>
+                <div class="contagem">
+                    <p class="contagem-pessoas">
+                        <?php
+                            $viewMode->countMembros();
+                        ?>
+                    </p>
+                </div>
                 <thead>
                     <tr>
                         <td>Nome</td>
@@ -88,8 +96,6 @@ if (!$logged) {
                 </thead>
                 <tbody>
                     <?php
-                    
-                        $viewMode = new UserView();
                         $viewMode->getMemberView()
                     ?>
                 </tbody>

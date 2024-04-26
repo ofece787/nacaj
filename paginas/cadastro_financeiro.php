@@ -1,6 +1,6 @@
 <?php
 
-    include('dados_login.php');
+    include_once('dados_login.php');
     $logged = $_SESSION['logged'] ??null;
     if (!$logged) die('Voce precisa estar logado para acessar esta pagina <a href="../index.php">Log In</a>');
 ?>

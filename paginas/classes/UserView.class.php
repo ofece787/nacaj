@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Associação NACAJ | membros</title>
+  <link rel="shortcut icon" href="../imagens/logoNACAJalinhado.png" type="image/x-icon">
 </head>
 <body>
 
@@ -61,6 +62,13 @@
                 echo "<tr><td>Nenhum resultado encontrado</td></tr>";
               }
               }
+
+              public function countMembros() {
+                $result = $this->contarMembros();
+                foreach($result as $res){
+                  echo $res;
+                }
+              }
                
               
 
@@ -83,6 +91,11 @@
                   echo "<td>Nao encontrado</td>";
                 }
 
+              }
+              
+              public function searchContagem($nome,$apelido,$cargo){
+                $result = $this->searchCount($nome,$apelido,$cargo);
+                echo '<div class="contagem"><p class="contagem-pessoas">'.$result.'</p></div>';
               }
 
 

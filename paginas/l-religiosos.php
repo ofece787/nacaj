@@ -1,10 +1,11 @@
 <?php 
 
-    include('dados_login.php');
-    $logged = $_SESSION['logged'] ??null;
-    if (!$logged) {
-        header('Location: index.php');
-    }
+include_once('dados_login.php');
+$logged = $_SESSION['logged'] ??null;
+if (!$logged) {
+    header('Location: index.php');
+}
+$viewMode = new ReligiososView();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,6 +77,13 @@
             <div class="caixa-total">
             <table>
                 <thead>
+                    <div class="contagem">
+                        <p class="contagem-pessoas">
+                            <?php
+                                $viewMode->countReligiosos();
+                            ?>
+                        </p>
+                    </div>
                     <tr>
                         <td>Nome</td>
                         <td>Igreja</td>
@@ -84,11 +92,11 @@
                         <td>Endereço</td>
                         <td>Contacto</td>
                     </tr>
+                    
                 </thead>
                 <tbody>
                     <?php
                     
-                        $viewMode = new ReligiososView();
                         $viewMode->getReligiosoView();
                     ?>
                 </tbody>

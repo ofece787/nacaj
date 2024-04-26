@@ -21,7 +21,7 @@
     <form action="" method="post">   
     
     <?php 
-        include 'includes/autoloader.inc.php';
+        include_once 'includes/autoloader.inc.php';
         if(isset($_GET['id'])){
             $id = $_GET['id'];
             $visao = new UserView();

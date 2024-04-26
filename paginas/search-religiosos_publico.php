@@ -1,5 +1,5 @@
 <?php 
-    include 'includes/autoloader.inc.php';
+    include_once 'includes/autoloader.inc.php';
 
 ?>
 
@@ -93,6 +93,7 @@
                         if(!empty($procura)){
                             $result = new ReligiososView();
                             $result->searchReligiao($nome,$apelido,$religiao,$igreja,$escalao);
+                            $result->searchContagem($nome,$apelido,$religiao,$igreja,$escalao);
                         }
 
                     }

@@ -57,6 +57,18 @@
         }
         }
 
+        public function countReligiosos() {
+          $result = $this->contarReligiosos();
+          foreach($result as $res) {
+            echo $res;
+          }
+        }
+
+        public function searchContagem($nome,$apelido,$igreja,$religiao,$escalao) {
+          $result = $this->searchCount($nome,$apelido,$igreja,$religiao,$escalao);
+          echo '<div class="contagem"><p class="contagem-pessoas">'.$result.'</p></div>';
+        }
+
         public function searchReligiao($nome,$apelido,$igreja,$religiao,$escalao){
             $result = $this->searchReligioso($nome,$apelido,$igreja,$religiao,$escalao);
             

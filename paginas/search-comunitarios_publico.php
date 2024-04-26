@@ -1,5 +1,5 @@
 <?php 
-    include 'includes/autoloader.inc.php';
+    include_once 'includes/autoloader.inc.php';
 
 ?>
 
@@ -89,6 +89,7 @@
                         if(!empty($procura)){
                             $result = new ComunitariosView();
                             $result->searchComunity($nome,$apelido,$cargo);
+                            $result->searchContagem($nome,$apelido,$cargo);
                             
                         }
 

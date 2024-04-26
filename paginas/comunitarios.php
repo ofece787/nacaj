@@ -1,10 +1,11 @@
 <?php 
 
-    include('dados_login.php');
-    $logged = $_SESSION['logged'] ??null;
-    if (!$logged){
-        header('Location: index.php');
-    }
+include_once('dados_login.php');
+$logged = $_SESSION['logged'] ??null;
+if (!$logged){
+    header('Location: index.php');
+}
+$viewMode = new ComunitariosView();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,6 +77,13 @@
             <div class="caixa-total">
             <table>
                 <thead>
+                    <div class="contagem">
+                        <p class="contagem-pessoas">
+                            <?php
+                                $viewMode->countComunitarios()
+                            ?>
+                        </p>
+                    </div>
                     <tr>
                         <td>Nome</td>
                         <td>Escalao</td>
@@ -86,7 +94,6 @@
                 <tbody>
                     <?php
                     
-                        $viewMode = new ComunitariosView();
                         $viewMode->getComunitarioView();
                     ?>
                 </tbody>

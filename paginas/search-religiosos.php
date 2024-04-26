@@ -1,6 +1,6 @@
 <?php 
 
-    include('dados_login.php');
+    include_once('dados_login.php');
 
     $logged = $_SESSION['logged'] ??null;
     if (!$logged) {
@@ -105,6 +105,7 @@
 
                             $result = new ReligiososView();
                             $result->searchReligiao($nome,$apelido,$igreja,$religiao,$escalao);
+                            $result->searchContagem($nome,$apelido,$igreja,$religiao,$escalao);
                         }
 
                     }

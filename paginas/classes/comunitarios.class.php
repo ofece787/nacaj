@@ -40,8 +40,24 @@
            if ($num >=1){
                 return $dados;
            } else {
-            return 1;
-           }
+               return 1;
+            }
+        }
+
+        protected function searchCount($nome, $apelido, $cargo) {
+            $nome = "%$nome%";
+            $apelido = "%$apelido%";
+            $escalao = "%$cargo%";
+            $sql = "SELECT * FROM comunitarios WHERE nome like ? or apelido like ? or escalao like ?";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute([$nome,$apelido,$escalao]);
+            $num = $stmt->rowCount();
+
+            if ($num >=1){
+                return $num;
+            } else {
+               return 0;
+            }
         }
 
         protected function getComunitarioById($id){
@@ -51,6 +67,14 @@
             $dados = $stmt->fetchAll();
             return $dados;
         }
+
+        protected function contarComunitarios() {
+            $sql = "SELECT count(*) from comunitarios";
+            $stmt = $this->connect()->query($sql);
+            $result = $stmt->fetch();
+            return $result;
+        }
+
 
         protected function updateComunitario($id, $nome, $apelido, $escalao, $endereco, $contacto) {
             $sql = "UPDATE comunitarios SET nome = ?, apelido = ?, escalao = ?, endereco = ?, contacto = ? where id = ?";

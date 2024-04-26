@@ -1,11 +1,12 @@
 <?php 
 
-    include('dados_login.php');
+include_once('dados_login.php');
 
-    $logged = $_SESSION['logged'] ??null;
-    if (!$logged) {
-        header('Location: index.php');
-    }
+$logged = $_SESSION['logged'] ??null;
+if (!$logged) {
+    header('Location: index.php');
+}
+$result = new UserView();
 
 ?>
 
@@ -85,7 +86,6 @@
                     </thead>
                     <tbody>
                         <?php
-                            $result = new UserView();
                         
                             if(isset($_POST['procura'])){
                                 $procura = $_POST['procura'];
@@ -98,6 +98,7 @@
                                     $apelido = $procura;
                                     $cargo = $procura;
                                     $result->getMemberSearch($nome,$apelido,$cargo);
+                                    $result->searchContagem($nome,$apelido,$cargo);
                                 }
                             }
                         ?>

@@ -1,5 +1,5 @@
 <?php 
-    include('financas_validacao.php');
+    include_once('financas_validacao.php');
 ?>
 
 <!DOCTYPE html>

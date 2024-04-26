@@ -27,6 +27,14 @@
             return $result;
         }
 
+        protected function contarMembros() {
+            $sql = "SELECT count(*) FROM membros_1";
+            $stmt = $this->connect()->query($sql);
+            $result = $stmt->fetch();
+
+            return $result;
+        }
+
         protected function setUser($nome,$apelido,$cargo,$mafiliacao,$bi,$bairro,$contacto,$dnascimento,$idadea,$jan,$fev,$mar,$abr,$mai,$jun,$jul,$ago,$set,$out,$nov,$dez,$tot,$nome_usuario,$nome_editado,$data_modificacao){
             $sql = "SELECT * FROM membros_1 WHERE nome = ? AND apelido = ?";
             $stmt = $this->connect()->prepare($sql);
@@ -87,12 +95,27 @@
             $stmt->execute([$nome,$apelido,$cargo]);
             $num = $stmt->rowCount();
             $dados = $stmt->fetchAll();
-            $not_found = array("valor"=> 1);
 
             if($num >=1) {
                 return $dados;
             } else {
                 return 1;
+            }
+        }
+
+        protected function searchCount($nome, $apelido, $cargo){
+            $nome = "%$nome%";
+            $apelido = "%$apelido%";
+            $cargo = "%$cargo%";
+            $sql = "SELECT * FROM membros_1 WHERE nome like ? or apelido like ? or cargo like ?";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute([$nome,$apelido,$cargo]);
+            $num = $stmt->rowCount();
+
+            if($num >=1) {
+                return $num;
+            } else {
+                return 0;
             }
         }
 

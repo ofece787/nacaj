@@ -45,6 +45,32 @@
             return $dados;
         }
 
+        protected function contarReligiosos() {
+            $sql = "SELECT count(*) from religiosos";
+            $stmt = $this->connect()->query($sql);
+            $result = $stmt->fetch();
+            return $result;
+        }
+
+        protected function searchCount($nome,$apelido,$igreja,$religiao,$escalao) {
+            $nome = "%$nome%";
+            $apelido = "%$apelido%";
+            $igreja = "%$igreja%";
+            $religiao = "%$religiao%";
+            $escalao = "%$escalao%";
+            $sql = "SELECT * FROM religiosos WHERE nome like ? or apelido like ? or igreja like ? or religiao like ? or escalao like ?";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute([$nome,$apelido,$igreja,$religiao,$escalao]);
+            $num = $stmt->rowCount();
+            
+
+            if($num >=1){
+                return $num;
+            } else {
+                return 0;
+            }
+        }
+
         protected function updateReligioso($nome, $apelido,$igreja,$religiao, $escalao, $endereco, $contacto, $id){
             $sql = "UPDATE religiosos SET nome = ?, apelido = ?, igreja = ?, religiao = ?, escalao = ?, bairro = ?, contacto = ? WHERE id = ?";
             $stmt = $this->connect()->prepare($sql);

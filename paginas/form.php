@@ -1,5 +1,5 @@
 <?php 
-    include('dados_login.php');
+    include_once('dados_login.php');
 ?>
 
 <!DOCTYPE html>

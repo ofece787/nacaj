@@ -1,5 +1,5 @@
 <?php 
-    include('login_senhas.php');
+    include_once('login_senhas.php');
 ?>
 
 <!DOCTYPE html>

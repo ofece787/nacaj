@@ -1,5 +1,6 @@
 <?php 
-    include 'includes/autoloader.inc.php';
+    include_once 'includes/autoloader.inc.php';
+    $viewMode = new ComunitariosView();
 
 ?>
 <!DOCTYPE html>
@@ -64,6 +65,14 @@
             </div>
             <div class="caixa-total">
                 <table>
+
+                    <div class="contagem">
+                        <p class="contagem-pessoas">
+                            <?php
+                                $viewMode->countComunitarios();
+                            ?>
+                        </p>
+                    </div>
                     <thead>
                         <tr>
                             <td>Nome</td>
@@ -75,7 +84,6 @@
                     <tbody>
                         <?php
                         
-                            $viewMode = new ComunitariosView();
                             $viewMode->getComunitarioViewPublico();
                         ?>
                     </tbody>

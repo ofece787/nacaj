@@ -1,5 +1,6 @@
 <?php 
-include 'includes/autoloader.inc.php'; 
+    include_once 'includes/autoloader.inc.php'; 
+    $viewMode = new UserView();
 
 ?>
 
@@ -67,6 +68,13 @@ include 'includes/autoloader.inc.php';
             </div>
             <div class="caixa-total">
                 <table>
+                    <div class="contagem">
+                        <p class="contagem-pessoas">
+                            <?php
+                                $viewMode->countMembros();
+                            ?>
+                        </p>
+                    </div>
                     <thead>
                         <tr>
                             <td>Nome</td>
@@ -77,7 +85,6 @@ include 'includes/autoloader.inc.php';
                     <tbody>
                         <?php
                         
-                            $viewMode = new UserView();
                             $viewMode->getMemberViewPublico();
                         ?>
                     </tbody>

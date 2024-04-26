@@ -15,12 +15,34 @@ body{
 a{
     color: #1b1b1b;
 }
+table{
+    position: relative;
+    padding-top: 20px;
+}
 .voltar{
     width: 30px;
 }
 .icone .voltar{
     width: 15px;
     height: 20px;
+}
+.contagem{
+    z-index: 1000;
+    position: fixed;
+    top: 123px;
+    right: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.contagem-pessoas{
+    background: #c0c0c0;
+    border: solid 2px #808080;
+    padding: 2px 10px;
+    border-radius: 10px;
+    width: 60px;
+    font-size: 0.8em;
+    text-align: right;
+    color: #fff;
 }
 @media(min-width: 700px){
 

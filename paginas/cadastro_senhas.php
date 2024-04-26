@@ -1,6 +1,6 @@
 <?php 
 
-    include('login_senhas.php');
+    include_once('login_senhas.php');
     $logged = $_SESSION['logged'] ??null;
     if (!$logged) {
         header('Location: index.php');

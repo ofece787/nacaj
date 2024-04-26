@@ -1,5 +1,6 @@
 <?php 
-    include 'includes/autoloader.inc.php';
+    include_once 'includes/autoloader.inc.php';
+    $viewMode = new ReligiososView();
 
 ?>
 <!DOCTYPE html>
@@ -64,6 +65,11 @@
             </div>
             <div class="caixa-total">
                 <table>
+                    <div class="contagem">
+                        <p class="contagem-pessoas">
+                            <?php $viewMode->countReligiosos();?>
+                        </p>
+                    </div>
                     <thead>
                         <tr>
                             <td>Nome</td>
@@ -77,7 +83,6 @@
                     <tbody>
                         <?php
                         
-                            $viewMode = new ReligiososView();
                             $viewMode->getReligiosoViewPublico();
                         ?>
                     </tbody>
